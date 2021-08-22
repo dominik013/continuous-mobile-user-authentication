@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        package="at.reichinger.cuarecorder">
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_SUPERUSER" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.location.gps" />
+    <uses-feature android:name="android.hardware.location.network" />
+
+    <application
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme"
+            tools:ignore="AllowBackup,GoogleAppIndexingWarning">
+        <activity android:name=".ui.CheckServiceDataActivity"></activity>
+        <activity android:name=".ui.GrantRootActivity" />
+        <activity android:name=".ui.KeyboardRecordingActivity" />
+        <activity android:name=".ui.RecordFaceImagesActivity" />
+        <activity android:name=".ui.RecordSpeechActivity" />
+        <activity
+                android:name=".ui.TaskListActivity"
+                android:label="@string/activity_tasks_label" />
+
+        <service
+                android:name=".service.DataRecordingService"
+                android:enabled="true" />
+
+        <activity
+                android:name=".ui.MainActivity"
+                android:label="@string/activity_main_label">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <provider
+                android:name="androidx.core.content.FileProvider"
+                android:authorities="at.reichinger.cuarecorder.android.fileprovider"
+                android:exported="false"
+                android:grantUriPermissions="true">
+            <meta-data
+                    android:name="android.support.FILE_PROVIDER_PATHS"
+                    android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+
+</manifest>

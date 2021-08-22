@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">Continuous User Authentication Recorder</string>
+    <string name="activity_main_label">CUA Recorder</string>
+
+    <string name="shared_preferences_tasks_key">at.reichinger.cuarecorder.TASKS</string>
+    <string name="shared_preferences_audio_key">at.reichinger.cuarecorder.AUDIO_RECORDING</string>
+    <string name="shared_preferences_face_images_key">at.reichinger.cuarecorder.FACE_IMAGES</string>
+
+    <string name="action_start_foreground_service">Start Foreground Service</string>
+    <string name="action_stop_foreground_service">Stop Foreground Service</string>
+    <string name="action_show_tasks">Show tasks</string>
+    <string name="action_compress_data">Compress data if recorded</string>
+
+    <string name="channel_name_data_recording">Data recording</string>
+    <string name="channel_description_data_recording">Displays information about current recording of data</string>
+    <string name="notification_title_data_recording">Recording</string>
+    <string name="notification_text_data_recording">Currently recording data for continuous user authentication</string>
+
+    <string name="notification_not_all_tasks_done">All tasks have to be fulfilled before submitting the data.</string>
+
+    <!-- Tasks -->
+    <string name="activity_tasks_label">Tasks</string>
+    <string name="task_title_record_speech">Record speech</string>
+    <string name="task_title_record_face_images">Record face images</string>
+    <string name="task_title_enable_recording_keyboard">Record keyboard presses</string>
+    <string name="task_title_grant_root_access">Grant root access</string>
+    <string name="task_title_enough_service_data_collected">Verify that enough service data was collected</string>
+
+    <!-- Record speech -->
+    <string name="record_speech_description">Press the record button and <b>clearly</b> speak the following text, while
+        holding your mobile phone in front of you. Press stop when you are finished:
+    </string>
+    <string name="record_speech_text_a">Familie Müller plant ihren Urlaub. Sie geht in ein Reisebüro und lässt sich von
+        einem Angestellten beraten. Als Reiseziel wählt sie Mallorca aus. Familie Müller bucht einen Flug auf die
+        Mittelmeerinsel. Sie bucht außerdem zwei Zimmer in einem großen Hotel direkt am Strand. Familie Müller badet
+        gerne im Meer.
+    </string>
+    <string name="record_speech_text_b">Ein wesentliches Merkmal vieler Linux-Distributionen ist es, dass sie kostenlos
+        und automatisiert Sicherheitsaktualisierungen für alle bereitgestellte Software anbieten. Diese Funktion existiert
+        zwar auch bei anderen gängigen Betriebssystemen, erfasst dort aber nicht alle bereitgestellte Software, funktioniert
+        nicht durchgehend automatisch oder ist nicht kostenlos, weshalb die Hürde, solche Aktualisierungen einzuspielen,
+        bei anderen Betriebssystemen höher ist als bei Linux.
+    </string>
+
+    <!-- Record face images -->
+    <string name="record_face_images_description">For this task you have to record images of your face. The camera will open when you press the button below. Try to place your face in the center of the screen as much as possible. In total you have to repeat this step 5 times.</string>
+    <string name="record_face_images_button_take_picture">Take picture</string>
+    <string name="record_face_images_amount_taken">%1$d / %2$d images taken</string>
+
+    <!-- Enable Recording Keyboard -->
+    <string name="record_keyboard_action">Record Keyboard</string>
+    <string name="record_keyboard_description">Write as much text as you like and then press done.</string>
+    <string name="action_done">Done</string>
+
+    <!-- Grant root -->
+    <string name="grant_root_action">Grant Root</string>
+    <string name="grant_root_description">CUARecorder needs root access to record process and touch information. If your device is not rooted check the internet and preferably use Magisk. Press the following button if the device is rooted and you want to grant Super User permission.</string>
+
+    <!-- Check service data -->
+    <string name="check_service_data_amount_key_input">Recorded keystrokes:\n%1$d / %2$d</string>
+    <string name="check_service_data_amount_process_info">Process info:\n%1$d / %2$d</string>
+    <string name="check_service_data_amount_touch_input">Touch inputs:\n%1$d / %2$d</string>
+    <string name="check_service_data_action">Check service data</string>
+    <string name="check_service_data_not_enough">Not enough service data collected</string>
+</resources>
